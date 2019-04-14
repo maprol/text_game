@@ -1,0 +1,46 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace CSharp_Shell
+{
+
+    public static class Program 
+    {
+        public static void Main() 
+        {
+           string yourName;
+           string button1;
+           string chose1;
+           string chose2;
+           
+           Console.WriteLine("Вітаємо у грі, ваша задача вибратись, удачі.");
+           Console.WriteLine("Введіть ваше ім'я");
+           yourName = Console.ReadLine();
+           Console.WriteLine("Привіт {0} ,ти прокинувся в кімнаті потрібно знайти вихід", yourName);
+           Console.WriteLine("походивши по кімнаті ви бачите 2 важелі який виберете 1 чи 2?");
+           button1 = Console.ReadLine();
+           if (button1 == "1"){
+               Console.WriteLine("Ви тянете за важіль, шафа що була в кімнаті відсувається, ви бачите двері та проходите дальше");
+               Console.WriteLine("Ви йдете по коридору, у кінці коридор розходиться. Куди піти, на право чи на ліво?");
+               chose1 = Console.ReadLine();
+               if (chose1 == "На право"){
+                  Console.WriteLine("Ви повертаєте на право, йдете дальше по коридору. В один момент ви чуєте тріск та підлога провалюється");
+                  Console.WriteLine("Ви втратили свідомість, коли прийшли до тями");
+                  Console.WriteLine("Ви бачите світло шо йде з шпаринки, спробуєте розбити стіну?");
+                  Console.WriteLine("Так/Ні");
+                  chose2 = Console.ReadLine();
+                  if (chose2 == "Так"){
+                      Console.WriteLine("Виявилось, що стіна земляна і ви без проблем вибираєтесь на зовні");
+                  }
+                  
+               else{
+                  Console.WriteLine("Ви повернули на ліво, йдучи до дверей ви відчули удар по голові");
+                }
+               }
+            }   
+           
+        }
+    }
+}
